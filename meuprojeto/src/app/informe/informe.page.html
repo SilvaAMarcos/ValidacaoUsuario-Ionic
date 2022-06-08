@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Informar Dados</ion-title>
+    <ion-menu-button menuId="first" contentId="main"></ion-menu-button>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div>
+    <h1>
+      Por Favor, Clique no Botão abaixo para prosseguir
+    </h1>
+  </div>
+  <ion-button (click)="presentAlertPrompt()"
+  color="danger" expand="block">Informe seus Dados</ion-button>
+  <div>
+    <p>{{nome1}}</p>
+    <p>{{nome2}}</p>
+    </div>
+</ion-content>

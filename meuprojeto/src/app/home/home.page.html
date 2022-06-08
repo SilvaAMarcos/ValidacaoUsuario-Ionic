@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Produtos em Destaque
+    </ion-title>
+    <ion-menu-button menuId="first" contentId="main"></ion-menu-button> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let home of materiais" (click)='presentToast(home.descricao)'>
+      <ion-thumbnail slot="start">
+        <img [src]="home.foto">
+      </ion-thumbnail>
+   <ion-label id="produtos" position="undefined">
+     <h2>{{home.nome}}</h2>
+     <p>Peso: {{home.peso}}</p>
+     <p>Marca: {{home.marca}}</p>
+     <!-- <p>{{home.descricao}}</p> -->
+   </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+ <ion-toolbar color="translucent">
+ </ion-toolbar>
